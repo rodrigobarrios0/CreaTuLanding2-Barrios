@@ -22,3 +22,18 @@ const products = [
 }
 ];
 
+export const getProducts = () => {
+    return new promise((resolve) => {
+        setTimout(() => {
+            resolve(products);
+        }, 800);
+    }); 
+};
+
+export const getProductById = (id) => {
+    return new promise((resolve) => {
+        setTimeout(() => {
+            resolve(products.find(p => p.id === id));
+        }, 800);
+    });
+};
