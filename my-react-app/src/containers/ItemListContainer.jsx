@@ -1,4 +1,9 @@
-const ItemDetailContainer = () => {
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import { getProducts } from "../data/products";
+import ItemList from "../components/ItemList";
+
+const ItemListContainer = () => {
     const [items, setItems] = useState([]);
     const{ categoryId} = useParams();
 
@@ -15,4 +20,4 @@ const ItemDetailContainer = () => {
     return <ItemList items={items} />;
 };
 
-export default ItemDetailContainer;
+export default ItemListContainer;

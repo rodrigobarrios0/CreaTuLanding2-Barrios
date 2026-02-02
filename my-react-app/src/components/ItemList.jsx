@@ -1,11 +1,13 @@
-const ItemListContainer = ({ mensaje }) => {
+import Item from "./Item";
+
+const ItemList = ({ items }) => {
     return (
-        <div className="container mt-5 text-center">
-        <h3 className="alert alert-primary">
-            {mensaje}
-        </h3>
+        <div>
+            {items.map(prod => (
+                <Item key={prod.id} {...prod}/>
+            ))}
         </div>
     );
 };
 
-export default ItemListContainer;
+export default ItemList;

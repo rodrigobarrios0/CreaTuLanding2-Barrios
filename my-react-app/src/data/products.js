@@ -23,15 +23,15 @@ const products = [
 ];
 
 export const getProducts = () => {
-    return new promise((resolve) => {
-        setTimout(() => {
+    return new Promise((resolve) => {
+        setTimeout(() => {
             resolve(products);
         }, 800);
     }); 
 };
 
 export const getProductById = (id) => {
-    return new promise((resolve) => {
+    return new Promise((resolve) => {
         setTimeout(() => {
             resolve(products.find(p => p.id === id));
         }, 800);
