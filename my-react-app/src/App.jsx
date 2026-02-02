@@ -8,6 +8,9 @@ function App() {
   return (
     <BrowserRouter>
       <NavBar />
+      <h1 className="text-5xl text-red-500 font-bold">
+  PRUEBA TAILWIND
+</h1>
 
       <Routes>
         <Route path="/" element={<ItemListContainer />} />
