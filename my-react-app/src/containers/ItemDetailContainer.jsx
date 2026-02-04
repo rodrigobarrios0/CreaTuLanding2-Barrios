@@ -9,10 +9,10 @@ const ItemDetailContainer = () => {
     const { itemId } = useParams();
 
     useEffect(() => {
-        getProductById(itemId).then(res => setItem(res));
+        getProductById(itemId).then(data => setItem(data));
     }, [itemId]);
     
-    return item ? <ItemDetail {...item} /> :<p>Cargando...</p>;
+    return item ? <ItemDetail {...item} />:<p>Cargando...</p>;
 };
 
 export default ItemDetailContainer;
